@@ -1,0 +1,1842 @@
+
+/* MAIN ================== */
+
+$colorred : #cb2929
+$colorlightred: #d60022
+$colormenu : #626f82
+$colortext : #575a5c
+$gutter: 15
+$columns: 12
+
+.container
+	max-width: 1170px
+	margin-left: auto
+	margin-right: auto
+	padding-left: $gutter + px
+	padding-right: $gutter + px
+
+/*  ICONS ================== */
+.icon 
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	background: $icons no-repeat
+
+
+@each $i in cart , cart-white
+	.icon-#{$i}	
+		+s(icon-#{$i})
+	.nav-cart:hover .icon-#{$i}
+		+s(icon-#{$i}-hover)
+
+@each $i in www, signature , slider-left, slider-right, heat-dish, free-shiping, min-order, facebook, vk, all-product , years, natural,medal , warning, file, close-xs, cooperation-cart , cooperation-store, cooperation-cafe, cooperation-customer, cart-active, cart-minus, cart-plus, cart-cancel, payment-method, cart-modal
+	.icon-#{$i}
+		+s(icon-#{$i})
+
+@each $i in close
+	.icon-#{$i}	
+		+s(icon-#{$i})
+		&:hover 
+			+s(icon-#{$i}-hover)
+
+@each $i in meat, meals, canned, cheese, cupcake
+	.icon-#{$i}	
+		+s(icon-#{$i})
+	.baner-product-item:hover .icon-#{$i}
+		+s(icon-#{$i}-hover)
+	.baner-product-item .active .icon-#{$i}
+		+s(icon-#{$i}-hover)
+
+/*  BUTTON ================== */
+
+.btn, a.btn 
+	display: inline-block
+	vertical-align: middle
+	text-align: center
+	padding: 10px 20px 0
+	height: 40px
+	font: normal 14px/14px Arial, sans-serif
+	+tr(all 0.2s linear)
+	border-radius: 5px
+	background: transparent
+	border: none 
+
+input[type="submit"].btn, button.btn
+	padding-top: 0
+
+
+/*  FORM ================== */
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+textarea
+	height: 40px
+	padding: 0 15px
+	color: #000
+	background: #fff 
+	&.form-control
+		display: block
+		width: 100%
+
+textarea
+	resize: none 
+	height: auto
+	min-height: 100px
+	padding-top: 10px
+
+label 
+	display: block
+
+/*  HEADER ================== */
+.header
+	
+	.logo
+		height: 90px
+		float: left
+		vertical-align: middle
+		+vertical
+		.logo-link
+			display: inline-block
+			& img
+				width: 100%
+#nav
+	#nav-toggle
+		display: none
+	.nav-list
+		padding: 0
+		height: 90px
+		+vertical
+		+justify
+		.nav-item
+			display: inline-block
+			a
+				vertical-align: middle
+				color: $colormenu
+				font-family: "RF Krabuler"
+				font-size: 14px
+				font-weight: bold
+				line-height: 30px
+				text-transform: uppercase
+				&:hover
+					color: $colorred
+			.active
+				color: $colorred
+	.nav-cart
+		display: inline-block
+		color: $colormenu
+		margin: 0 8px 0 10px
+		font-family: "RF Krabuler"
+		font-size: 14px
+		font-weight: bold
+		line-height: 30px
+		text-transform: uppercase
+		vertical-align: middle
+		.icon-cart
+			padding-right: 30px
+			vertical-align: sub
+		#text-cart
+			display: inline-block	
+		.order-num
+			display: inline-block
+			width: 25px
+			height: 25px
+			color: #fff
+			margin-left: 10px
+			font-family: "RF Krabuler"
+			font-size: 14px
+			font-weight: bold
+			line-height: 24px
+			text-align: center
+			background: $colorred 
+			border-radius: 50%
+			vertical-align: top	
+			text-transform: uppercase
+		&:hover 
+			color: #cb2929
+			text-decoration: none
+
+.baner-list
+	height: 200px
+	padding: 0
+	margin: 0 10%
+	+vertical
+	+justify
+	.baner-product-item
+		display: inline-block
+		vertical-align: middle
+/* CONTENT ================== */
+
+
+// section baner-home
+#baner-home
+
+.slider-main-page
+	.slide-item
+		min-height: 525px
+		background-color: red
+		background: url('../img/bg-slider-baner.png') no-repeat 60% 0
+		background-size: cover
+		.slider-content
+			padding: 0 5%
+			.slider-title
+				color: #ffffff
+				margin-top: 150px
+				font-size: 62px
+				font-family: "RF Krabuler"
+				font-weight: bold
+				line-height: 67px
+				& span
+					text-transform: uppercase
+			.icon-www
+				margin-top: 40px
+	.btn-slider
+		position: absolute
+		top: 50%
+		border: none
+		background: transparent
+		z-index: 91
+		margin-top: -16px
+	.btn-prev
+		left: 3%	
+	.btn-next
+		right: 3%
+
+// section about-company
+#about-company
+	.chief-img
+		position: relative
+		img
+			display: block
+			width: 100%
+			margin: 0 auto
+			transition: all 0.5s ease 0s
+			&:hover
+				transform: scale(1.05)
+					transition: all 0.5s ease 0s
+	.company-description	
+		margin-top: 100px			
+		.about-title
+			color: #575a5c
+			margin-bottom: 35px
+			font-family: "RF Krabuler"
+			font-size: 62px
+			font-weight: bold
+			line-height: 62px
+		.about-text
+			color: #575a5c
+			margin-bottom: 20px
+			font-family: Ubuntu
+			font-size: 16px
+			font-weight: bold
+			line-height: 30px
+			&:last-child
+				margin-bottom: 50px
+.owner
+	margin-top: 60px
+	float: right
+	display: inline-block
+	.owner-wrap	
+		display: inline-block
+		margin-left: 50px
+		vertical-align: middle
+		.owner-detail
+			color: #575a5c
+			font-family: "RF Krabuler"
+			font-size: 26px
+			font-weight: bold
+			line-height: 30px
+		.owner-position
+			color: rgba(87, 90, 92, 0.5)
+			font-family: Ubuntu
+			font-size: 13px
+			font-weight: bold
+			line-height: 30px	
+
+
+
+// section product-baner
+#product-baner
+	min-height: 230px
+	position: relative	
+	.about-background
+		position: absolute	
+		top: -35px	
+		left: 0	
+		right: 0	
+		background: url('../img/bg-baner-product.png') no-repeat
+		background-size: cover
+	.baner-list
+		height: 200px
+		padding: 0
+		margin: 0 10%
+		+vertical
+.baner-product-item
+	display: inline-block
+	vertical-align: middle
+	width: 20%
+	.icon
+		display: block
+		margin: 0 auto 
+	.baner-product-title
+		color: #ffffff
+		margin-top: 10px
+		font-family: "RF Krabuler"
+		font-size: 14px
+		font-weight: bold
+		line-height: 30px
+		text-align: center
+		text-transform: uppercase
+	&:hover .baner-product-title
+		color: #6b1818		
+
+// stule for product baner store page
+.product-baner-store
+	.baner-product-item
+		a:hover
+			text-decoration: none
+		.active 
+			.baner-product-title
+				color: #6b1818
+
+// section product
+#product
+	margin-bottom: 30px
+	.category-wrap
+		margin-top: 70px
+		&:first-child
+			margin-top: 0
+	.category-title
+		color: #575a5c
+		margin: 20px 0 10px 0
+		font-family: "RF Krabuler"
+		font-size: 62px
+		font-weight: bold
+		line-height: 66px
+		
+	.icon-www
+		margin-bottom: 40px
+	.product-item
+		min-height: 440px
+		text-align: center
+		border-radius: 10px
+		border: 1px solid #ebebeb
+		background-color: #ffffff
+		z-index: 93
+
+	.img-wrap
+		overflow: hidden
+		border-radius: 10px
+		transition: all 0.5s ease 0s
+		img
+			width: 100%
+			transition: all 0.5s ease 0s
+			max-width: 100%
+		&:hover
+			transition: all 0.5s ease 0s
+			background: rgba(0,0,0, 0.5)	
+		&:hover img
+			transition: all 0.5s ease 0s
+			transform: scale(1.1)
+			opacity: 0.5	
+	.product-title
+		position: relative
+		display: block
+		max-width: 85%
+		min-height: 60px
+		margin: 20px auto
+		color: #575a5c
+		font-family: Ubuntu
+		font-size: 14px
+		font-weight: bold
+		line-height: 20px	
+
+	.truncate_more_link
+		font-size: 0px
+		width: 24px
+		height: 20px
+		display: inline-block		
+		background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI4NC45MjkgMjg0LjkyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjg0LjkyOSAyODQuOTI5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTI4Mi4wODIsNzYuNTExbC0xNC4yNzQtMTQuMjczYy0xLjkwMi0xLjkwNi00LjA5My0yLjg1Ni02LjU3LTIuODU2Yy0yLjQ3MSwwLTQuNjYxLDAuOTUtNi41NjMsMi44NTZMMTQyLjQ2NiwxNzQuNDQxICAgTDMwLjI2Miw2Mi4yNDFjLTEuOTAzLTEuOTA2LTQuMDkzLTIuODU2LTYuNTY3LTIuODU2Yy0yLjQ3NSwwLTQuNjY1LDAuOTUtNi41NjcsMi44NTZMMi44NTYsNzYuNTE1QzAuOTUsNzguNDE3LDAsODAuNjA3LDAsODMuMDgyICAgYzAsMi40NzMsMC45NTMsNC42NjMsMi44NTYsNi41NjVsMTMzLjA0MywxMzMuMDQ2YzEuOTAyLDEuOTAzLDQuMDkzLDIuODU0LDYuNTY3LDIuODU0czQuNjYxLTAuOTUxLDYuNTYyLTIuODU0TDI4Mi4wODIsODkuNjQ3ICAgYzEuOTAyLTEuOTAzLDIuODQ3LTQuMDkzLDIuODQ3LTYuNTY1QzI4NC45MjksODAuNjA3LDI4My45ODQsNzguNDE3LDI4Mi4wODIsNzYuNTExeiIgZmlsbD0iI0Q4MDAyNyIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=)
+		&.active
+			background: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI4NC45MjkgMjg0LjkyOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjg0LjkyOSAyODQuOTI5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTI4Mi4wODIsMTk1LjI4NUwxNDkuMDI4LDYyLjI0Yy0xLjkwMS0xLjkwMy00LjA4OC0yLjg1Ni02LjU2Mi0yLjg1NnMtNC42NjUsMC45NTMtNi41NjcsMi44NTZMMi44NTYsMTk1LjI4NSAgIEMwLjk1LDE5Ny4xOTEsMCwxOTkuMzc4LDAsMjAxLjg1M2MwLDIuNDc0LDAuOTUzLDQuNjY0LDIuODU2LDYuNTY2bDE0LjI3MiwxNC4yNzFjMS45MDMsMS45MDMsNC4wOTMsMi44NTQsNi41NjcsMi44NTQgICBjMi40NzQsMCw0LjY2NC0wLjk1MSw2LjU2Ny0yLjg1NGwxMTIuMjA0LTExMi4yMDJsMTEyLjIwOCwxMTIuMjA5YzEuOTAyLDEuOTAzLDQuMDkzLDIuODQ4LDYuNTYzLDIuODQ4ICAgYzIuNDc4LDAsNC42NjgtMC45NTEsNi41Ny0yLjg0OGwxNC4yNzQtMTQuMjc3YzEuOTAyLTEuOTAyLDIuODQ3LTQuMDkzLDIuODQ3LTYuNTY2ICAgQzI4NC45MjksMTk5LjM3OCwyODMuOTg0LDE5Ny4xODgsMjgyLjA4MiwxOTUuMjg1eiIgZmlsbD0iI0Q4MDAyNyIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=) no-repeat
+	.product-price
+		color: #575a5c
+		margin: 25px 0 35px 0
+		font-family: "RF Krabuler"
+		font-weight: bold
+		line-height: 20px	
+		font-size: 30px
+		span
+			font-size: 19px
+	.btn-cart
+		width: 85%
+		height: 40px
+		color: #ffffff
+		margin-bottom: 20px
+		font-family: "RF Krabuler"
+		font-size: 14px
+		font-weight: bold
+		line-height: 14px
+		text-transform: uppercase
+		border: 2px solid transparent
+		border-radius: 20px
+		background-color: #ca2d2d
+		&:hover
+			color: #ca2d2d
+			background-color: #ffffff
+			border-color: rgba(177, 177, 177, 0.21)
+			text-decoration: none
+	.all-product
+		border: transparent		
+		position: relative
+		.img-wrap
+			position: relative
+			img
+				min-height: 341px
+			.content-all-product
+				position: absolute
+				width: 100%
+				top: 50%
+				left: 50%
+				z-index: 99
+				transform: translate(-50%, -50%)
+				.icon-all-product
+					visibility: hidden 
+					margin-top: 30px
+					transition: all 0.5s ease-in-out
+					transform: translate(-150px,0)
+				.all-poduct-title
+					color: #ffffff
+					font-family: "RF Krabuler"
+					font-size: 35px
+					font-weight: bold
+					line-height: 40px
+			&:hover 
+				.icon-all-product
+					visibility: visible 
+					transform: translate(0,0)
+					transition: all 0.5s ease-in-out
+	
+// section delivery
+	
+#delivery
+	min-height: 650px
+	padding-top: 20px
+	text-align: center
+	background: url('../img/bg-shiping.png') no-repeat
+	background-size: cover
+	.delivery-title
+		color: #fff
+		margin: 50px 0 50px 0
+		font-family: "RF Krabuler"
+		font-size: 62px
+		font-weight: bold
+		line-height: 60px
+	.delivery-item
+		margin-bottom: 110px
+		.icon-wrap
+			height: 85px
+			margin-bottom: 25px
+			+vertical
+		.item-title
+			color: #ffffff
+			font-family: Ubuntu
+			font-size: 20px
+			font-weight: bold
+			line-height: 30px
+	.work-time-title
+		color: #ffffff
+		font-size: 25px	
+		font-family: "RF Krabuler"
+		font-weight: bold
+		line-height: 30px
+	.work-time
+		height: 120px
+		padding-top: 25px
+		background: 	url('../img/bg-work-time.png') no-repeat	center top	
+		background-size: cover	
+		.work-schedule
+			color: #ffffff
+			font-size: 30px
+			font-family: "RF Krabuler"
+			font-weight: bold
+			line-height: 30px
+			span
+				color: #6b1818
+				font-size: 25px	
+
+@-webkit-keyframes swing
+	15%
+		-webkit-transform: translateX(9px)  rotate(2deg)
+		transform: translateX(9px)  rotate(2deg)
+	30%
+		-webkit-transform: translateX(-9px) 
+		transform: translateX(-9px) 
+	40%
+		-webkit-transform: translateX(6px)
+		transform: translateX(6px)
+	50%
+		-webkit-transform: translateX(-6px)
+		transform: translateX(-6px)
+	65%
+		-webkit-transform: translateX(3px)
+		transform: translateX(3px)
+	100%
+		-webkit-transform: translateX(0)
+		transform: translateX(0)
+
+
+@keyframes swing
+	15%
+		-webkit-transform: translateX(9px)
+		transform: translateX(9px)
+	30%
+		-webkit-transform: translateX(-9px)
+		transform: translateX(-9px)
+	40%
+		-webkit-transform: translateX(6px)
+		transform: translateX(6px)
+	50%
+		-webkit-transform: translateX(-6px)
+		transform: translateX(-6px)
+	100%
+		-webkit-transform: translateX(0)
+		transform: translateX(0)
+.swing:hover
+	-webkit-animation: swing 0.3s ease
+	animation: swing 0.3s ease
+	-webkit-animation-iteration-count: 2
+	animation-iteration-count: 2
+
+		
+// style for about page header/////
+
+.header-about
+	min-height: 750px
+	background: url('../img/bg-about-header.png') no-repeat
+	background-size: cover
+.header-white
+	#nav 
+		.nav-list .nav-item a
+			color: #fff
+			&:hover, &.active
+				color: $colorred
+		.nav-cart		
+			color: #fff
+			&:hover
+				color: $colorred
+	.header-about-content
+		margin-top: 90px 
+		.header-about-title
+			color: #ffffff
+			margin-bottom: 50px
+			font-family: "RF Krabuler"
+			font-size: 62px
+			font-weight: bold
+			line-height: 70px
+		.icon-www
+			margin-bottom: 80px	
+		.header-about-text
+			max-width: 65%
+			color: #ffffff
+			margin-bottom: 15px
+			font-family: Ubuntu
+			font-size: 16px
+			font-weight: bold
+			line-height: 30px	
+			text-indent: 2rem
+
+.main-page-title
+	color: #575a5c
+	margin: 50px 0 70px 0
+	font-family: "RF Krabuler"
+	font-size: 62px
+	text-align: center
+	font-weight: bold
+	line-height: 60px
+.achievement-item
+	text-align: center
+	.icon
+		margin: 10px 0 30px 0
+	.achievement-title
+		min-height: 55px
+		color: #575a5c
+		margin-bottom: 45px
+		font-family: Ubuntu
+		font-size: 21px
+		font-weight: bold
+		line-height: 27px
+	.achievement-text
+		color: #575a5c
+		font-family: Ubuntu
+		font-size: 16px
+		font-weight: bold
+		line-height: 22px	
+#history
+	min-height: 640px
+	margin-top: 60px
+	background: url('../img/bg-history.png') no-repeat
+	background-size: cover
+	.center
+		margin: 0 8.33333333%
+	.main-page-title
+		color: #fff
+		margin-top: 90px
+	.history-text
+		color: #ffffff
+		margin-bottom: 20px
+		font-family: Ubuntu
+		font-size: 16px
+		text-indent: 2rem
+		font-weight: bold
+		line-height: 30px	
+
+	// style for team page /////	
+.header-team
+	text-align: center
+	background: url('../img/bg-header-team.png') no-repeat
+	background-size: cover
+.header
+	text-align: center
+	background-size: cover
+	.header-baner-wrap
+		height: 460px
+		+vertical
+		.header-baner
+			display: inline-block
+			.header-baner-title	
+				color: #ffffff
+				margin-bottom: 40px
+				font-family: "RF Krabuler"
+				font-size: 62px
+				font-weight: bold
+				line-height: 65px
+.team
+	padding: 35px 0
+	.team-item
+		text-align: center
+		min-height: 300px
+		margin-bottom: 30px
+		.team-img-wrap
+			min-height: 400px
+			.team-img
+				max-width: 100%
+		.team-item-title
+			color: #575a5c
+			margin: 10px 0
+			font-family: Ubuntu
+			font-size: 21px
+			font-weight: bold
+			line-height: 30px	
+		.tiam-position
+			color: #ca2d2d
+			font-family: Ubuntu
+			font-size: 16px
+			font-weight: bold
+			line-height: 30px
+.best-employees
+	min-height: 640px
+	padding: 130px 0
+	background: url('../img/bg-best-employees.png')	no-repeat
+	background-size: cover
+.best-employees-wrap
+	margin-top: 40px
+	text-align: center
+	img
+		max-width: 100%
+	.best-employees-title
+		color: #ffffff
+		margin-top: 10px
+		font-family: Ubuntu
+		font-size: 21px
+		font-weight: bold
+		line-height: 30px
+	.best-employees-position
+		opacity: 0.3
+		color: #ffffff
+		font-family: Ubuntu
+		font-size: 16px
+		font-weight: bold
+		line-height: 30px	
+
+
+.employees-wrap
+	margin-top: 30px
+	.icon-medal
+		vertical-align: middle
+	.employees-title
+		display: inline-block
+		color: #ffffff
+		margin: 10px 10px 20px  10px
+		font-family: "RF Krabuler"
+		font-size: 62px
+		font-weight: bold
+		line-height: 65px
+		vertical-align: middle
+	.employees-month
+		display: inline-block
+		color: #404041
+		width: 118px
+		height: 25px
+		font-family: "RF Krabuler"
+		font-size: 20px
+		font-weight: bold
+		line-height: 21px
+		border-radius: 12px
+		text-align: center
+		background-color: #e7ff1f
+		vertical-align: middle
+	.employees-text 
+		color: #ffffff
+		margin-top: 10px
+		font-family: Ubuntu
+		font-size: 16px
+		font-weight: bold
+		line-height: 25px 
+
+// style for career page /////	
+.header-career
+	background: url('../img/bg-header-career.png') no-repeat
+	background-size: cover
+.jobs-title-block
+	.title-page
+		text-align: left
+.title-page
+	text-align: center
+	color: #575a5c
+	margin: 30px 0
+	font-family: "RF Krabuler"
+	font-size: 62px
+	font-weight: bold
+	line-height: 60px	
+.jobs-title
+	margin-bottom: 10px	
+	color: #575a5c
+	font-family: Ubuntu
+	font-size: 21px
+	font-weight: bold
+	line-height: 30px		
+.jobs-item		
+	margin: 40px 0
+	padding: 10px 0 45px 0
+	border-bottom: 2px solid #ebebeb
+	.photo-block
+		text-align: center
+		margin-top: 50px
+
+		.jobs-img
+			max-width: 100%
+		.jobs-title
+			margin-bottom: 10px	
+	.jobs-item-text
+		color: #ca2d2d
+		font-family: Ubuntu
+		font-size: 16px
+		font-weight: bold
+		line-height: 30px	
+	.jobs-descr
+		color: #575a5c
+		margin-bottom: 15px
+		text-indent: 1rem
+	.career-contact
+		float: right
+		margin-top: 70px
+		.contact-list
+			.contact-list-item
+				display: inline-block
+				margin-right: 25px
+				&:last-child
+					margin-right: 0
+				.career-contact-text
+					display: inline-block
+					color: #575a5c
+					font-family: "RF Krabuler"
+					font-size: 14px
+					font-weight: bold
+					line-height: 30px
+					text-transform: uppercase
+				.icon-warning
+					vertical-align: sub	
+					margin-right: 5px
+				.apply-sv
+					color: #fff
+					padding: 0 50px
+					max-width: 224px
+					height: 40px
+					border-radius: 20px
+					text-align: center
+					line-height: 39px
+					border: 1px solid transparent
+					background-color: #ca2d2d
+					&:hover
+						color: #ca2d2d
+						background-color: #fff 
+						border-color: #ca2d2d
+.overlay
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	opacity: 0.4
+	background: #000	
+	z-index: 98				
+.jobs-contact-popap
+	display: none
+	position: fixed
+	padding: 30px
+
+	max-width: 750px
+	max-height: 439px
+	border-radius: 15px
+	background-color: #ffffff		
+	z-index: 99			
+	.icon-close
+		position: absolute
+		top: 0
+		right: -25px
+		cursor: pointer
+.form-title
+	color: #404041
+	margin-bottom: 20px
+	font-family: Ubuntu
+	font-size: 16px
+	text-align: center
+	font-weight: bold
+	line-height: 30px	
+.input-item ,
+textarea
+	display: inline-block
+	border-radius: 10px
+	border: 1px solid #ca2d2d
+	background-color: #ffffff
+	color: #555
+	font-family: Ubuntu
+	font-size: 14px
+	font-weight: bold
+	line-height: 20px
+.input-item	
+	margin-bottom: 20px
+	max-width: 185px
+	&.first
+		margin-right: 15px
+textarea
+	display: block
+	margin-bottom: 50px
+	width: 100%
+	height: 30px
+	clear: both
+	
+.file-upload 
+	float: left
+	margin-left: 20px
+	input[type="file"]
+		display: none
+	.icon-file
+		vertical-align: sub	
+	.file-text
+		display: inline-block	
+		margin-left: 10px
+		color: #ca2d2d
+		font-family: Ubuntu
+		font-size: 14px
+		font-weight: bold
+		line-height: 20px
+	#file_name
+		display: block
+		margin-top: 8px
+		max-width: 165px
+.jobs-submit,
+.contact-submit
+	color: #fff
+	float: right
+	margin-left: 20px
+	padding: 0 50px
+	max-width: 263px
+	height: 40px
+	border: 2px solid transparent
+	border-radius: 10px
+	background-color: #ca2d2d	
+	&:hover	
+		color: #ca2d2d		
+		border-color: #ca2d2d	
+		background-color: #fff
+		
+
+// style for charity page /////	
+.header-charity
+	background: url('../img/bg-header-charity.png') no-repeat
+	background-size: cover
+.charity-block-top
+	text-align: center
+
+.post-item 
+	padding: 40px 0
+	border-bottom: 2px solid #ebebeb
+	.post-img-wrap
+		text-align: center
+		overflow: hidden
+		.post-img
+			max-width: 100%
+			overflow: hidden
+			transition: all 0.5s 
+			&:hover
+				transform: scale(1.11)
+				transition: all 0.5s
+.post-content
+	
+	.post-title
+		display: inline-block
+		color: #575a5c
+		margin-bottom: 30px
+		font-family: Ubuntu
+		font-size: 21px
+		font-weight: bold
+		line-height: 30px
+		&:after
+			content: ' '
+			display: block
+			height: 13px
+			width: 94px
+			margin-top: 20px
+			background: url('../img/icon-www.png') no-repeat
+	.post-text
+		color: #575a5c
+		font-family: Ubuntu
+		font-size: 16px
+		font-weight: bold
+		line-height: 30px		
+	.post-read
+		display: block
+		color: #ca2d2d
+		margin-top: 30px
+		font-family: "RF Krabuler"
+		font-size: 14px
+		font-weight: bold
+		line-height: 30px
+		text-transform: uppercase
+		&:hover
+			text-decoration: underline
+
+// style for news page /////	
+.header-news
+	margin-bottom: 60px
+	background: url('../img/bg-header-news.png') no-repeat
+	background-size: cover
+.pagination
+	margin: 20px 0
+	.page-numbers
+		margin-top: 30px
+		text-align: center
+		.page-list
+			display: inline-block
+			margin-right: 5px
+			.page-item
+				display: block
+				width: 25px
+				height: 25px
+				color: #575a5c
+				font-family: Ubuntu
+				font-size: 16px
+				font-weight: bold
+				line-height: 24px
+				border-radius: 50%
+				&:hover,
+				&.active
+					color: #fff
+					background-color: #ca2d2d
+			
+// style for cooperation page /////	
+.header-cooperation
+	background: url('../img/bg-header-cooperation.png') no-repeat
+	background-size: cover
+.cooperation-top
+	.title-page
+		color: #ca2d2d
+		margin: 50px 0
+
+.cooperation-baner
+	height: 478px
+	background: url('../img/bg-cooperation-baner.png') no-repeat
+	background-size: cover
+	.cooperation-item	
+		padding: 90px 0 30px
+		text-align: center
+		.icon
+			min-height: 70px
+		.cooperation-title
+			color: #fefefe
+			margin: 45px 0
+			font-family: Ubuntu
+			font-size: 21px
+			font-weight: bold
+			line-height: 30px
+		.cooperation-text
+			color: #fefefe
+			font-family: Ubuntu
+			font-size: 16px
+			font-weight: bold
+			line-height: 30px
+
+
+	// style for contacts page /////	
+.header-contacts
+	background: url('../img/bg-header-contacts.png') no-repeat
+	background-size: cover	
+#form-contact
+	margin-top: 40px
+	.input-item
+		width: 48%
+		max-width: 48%
+		border: 1px solid #ca2d2d
+	.contact-submit
+		display: block
+		margin: 0 auto
+		float: none
+
+	// style for carts page /////	
+	// #nav .nav-item .active .text-cart
+#nav 
+	.nav-cart 
+		.icon-cart-active
+			display: none	
+	.active 
+		#text-cart
+			color: #cb2929
+		.icon-cart
+			display: none	
+		.icon-cart-active
+			display: inline-block	
+// #nav .active .icon-cart-active
+// 	display: inline-block
+.total-order
+	padding-bottom: 50px
+	.cart-title-wrap
+		text-align: center
+
+		.cart-title
+			color: #575a5c
+			font-family: "RF Krabuler"
+			font-size: 14px
+			font-weight: bold
+			line-height: 30px
+			text-transform: uppercase
+	
+	.product-item
+		height: 180px
+		display: flex
+		width: 100%
+		border-radius: 15px
+		border: 1px solid transparent
+		.content-wrap
+			margin:  auto
+			text-align: center
+			.cart-img-wrap
+				img
+					max-width: 100%
+					border-radius: 10px
+			.icon
+				cursor: pointer 
+			.cart-product-title
+				font-size: 20px	
+			.product-quantity
+				display: inline-block
+				color: #ffffff
+				margin: 0 9px
+				padding: 0
+				text-align: center
+				font-family: Ubuntu
+				font-size: 20px
+				font-weight: bold
+				line-height: 40px
+				text-transform: uppercase	
+				width: 40px
+				height: 40px
+				border: 0px
+				outline: none
+				border-radius: 50%
+				background-color: #ca2d2d
+			.cart-price
+				color: #575a5c
+				font-family: Ubuntu
+				font-size: 20px
+				font-weight: bold
+				line-height: 30px
+				span
+					text-transform: uppercase
+			.icon-cart-cancel
+				display: none		
+		&:hover
+			border-color: #ca2d2d
+			background-color: #fcfcfc
+			.icon-cart-cancel			
+				display: inline-block
+.total-price
+	margin: 20px 0
+	text-align: right
+	border-top: 2px solid #eaeaea
+	.to-pay
+		display: inline-block
+		margin: 20px 20px 10px 0
+		font-size: 20px
+		font-weight: bold
+		line-height: 30px
+		color: #575a5c
+		font-family: "RF Krabuler"
+		font-weight: 400
+		text-transform: uppercase
+		span
+			color: #ca2d2d
+			margin-left: 10px
+			font-family: Ubuntu
+			font-weight: 700
+			text-transform: lowercase
+		.sum-puy
+			margin-right: 30px
+			text-transform: uppercase
+
+#payment-details
+	.title
+		color: #575a5c
+		margin: 30px 0
+		font-family: "RF Krabuler"
+		font-size: 14px
+		font-weight: bold
+		line-height: 30px
+		text-transform: uppercase
+	.payment-details-left,
+	.payment-details-right
+		width: 50%
+		display: inline-block
+		float: left
+		& input
+			width: 47%
+			max-width: 264px
+			height: 42px
+			padding: 0 5px
+			margin: 5px 4% 20px 0
+			font-family: Ubuntu
+			font-size: 14px
+			font-weight: bold
+			line-height: 20px
+			border-radius: 10px
+			outline: none
+			border: 1px solid #ca2d2d
+			background-color: #ffffff
+			&:focus
+				border: 2px solid #ca2d2d
+		& textarea
+			min-height: 110px	
+			margin-left: 5%
+			margin-bottom: 30px
+			width: 95%
+			&:focus
+				border: 2px solid #ca2d2d
+
+	.payment-details-left
+		// border: 1px solid green
+		#phone	
+			margin-right: 0
+		.input-address	
+			display: inline-block
+			float: left
+			margin: 0
+			text-align: center
+		.small-input
+			width: 11%
+		#street
+			max-width: 25%
+			text-align: left
+			border-right: 0px	
+			padding-right: 0
+			border-radius : 10px 0px 0px 10px
+		#house
+			padding: 0 
+			border-radius : 0
+			border-left: 1px solid #404041
+			border-right: 1px solid #404041
+		#apartment
+			border-radius : 0px 10px 10px 0px
+			border-left: 0
+			margin-right: 4%
+		#email
+			margin: 0 0 0 5px
+		.payment-method-title
+			margin: 0	0 10px
+		.payment-method
+			.payment-method-text
+				display: inline-block
+				vertical-align: middle
+	.payment-details-right
+		.btn-send
+			float: right
+			color: #fff
+			border: 1px solid transparent
+			background: #ca2d2d				
+			&:hover
+				color: #ca2d2d	
+				background: #fff
+				border-color: #ca2d2d	
+.cart-modal
+	position: fixed
+	display: none
+	padding: 10px 20px
+	max-width: 555px
+	max-height: 334px
+	width: 100%
+	height: 100%
+	border-radius: 15px
+	text-align: center
+	background: #fff			
+	z-index: 99
+	.icon-close
+		position: absolute
+		right: -20px
+		top: 0
+		cursor: pointer
+	.icon-cart-modal
+		margin-top: 20px	
+	.modal-title
+		color: #d60022
+		font-family: "RF Krabuler"
+		font-size: 62px
+		font-weight: bold
+		line-height: 60px
+		margin: 20px 0
+	.modal-descr
+		color: #404041
+		font-family: Ubuntu
+		font-size: 16px
+		font-weight: bold
+		line-height: 35px
+				
+/*  FOOTER ================== */
+#footer
+	padding: 100px 0 40px 0
+	.footer-logo
+		margin-bottom: 25px
+	.footer-nav
+		.footer-nav-list
+			.footer-nav-item
+				color: #575a5c
+				font-family: "RF Krabuler"
+				font-size: 14px
+				font-weight: bold
+				line-height: 30px
+				text-transform: uppercase
+				&:hover
+					color: $colorred
+	.footer-text
+		color: #575a5c
+		margin-bottom: 40px
+		font-size: 16px
+		font-family: "RF Krabuler"
+		font-weight: bold
+		line-height: 30px
+	.footer-title
+		color: #d60022
+		font-size: 25px
+	.social
+		display: block
+		.social-list
+			display: inline-block
+			margin-right: 10px
+			.icon
+				transition: all 0.3s ease-in-out
+				&:hover
+					transform: rotate(360deg)
+	.copyright
+		text-align: center
+		.icon-www
+			margin: 20px 0 30px 0
+		.copyright-text
+			color: #575a5c
+			font-family: Ubuntu
+			font-size: 16px
+			font-weight: bold
+			line-height: 30px		
+
+/*  MEDIA ================== */
+@media ( max-width: 1200px)
+	.owner
+		margin-top: 0
+	.slider-main-page 
+		.btn-prev
+			left: 2%
+		.btn-next
+			right: 2%	
+	.slider-content
+		padding: 0 50px	
+	#about-company .company-description
+		margin-top: 50px	
+	#product 
+		.product-item
+			min-height: 400px
+		.product-price
+			margin: 20px 0		
+		.product-title
+			min-height: 80px
+
+	// style team pageteam
+	.team .team-item .team-img-wrap
+		min-height: 250px
+
+
+@media ( max-width: 992px) 
+	.container
+		padding-left: 10px
+		padding-right: 10px
+		.row	
+			margin-left: -10px
+			margin-right: -10px
+	.header #nav .nav-cart #text-cart
+		display: none		
+	.header #nav .nav-cart
+		margin: 0	
+	.header #nav .nav-cart .order-num
+		margin-left: 0
+	.header #nav .nav-cart .icon-cart
+		padding-right: 25px	
+
+	.product-baner .baner-list
+		margin: 0
+
+	.owner
+		margin-bottom: 30px
+		.owner-wrap
+			margin-left: 20px	
+	#about-company 
+		.company-description 
+			margin-top: 20px
+			.about-title
+				font-size: 48px
+				line-height: 48px		
+			.about-text
+				font-size: 15px
+			
+	#product .product-item
+		min-height: 495px
+		margin-bottom: 30px	
+	#product .product-title
+		min-height: 75px	
+	#product .img-wrap img
+		max-height: 477px
+	#product .all-product .img-wrap .content-all-product .icon-all-product
+		transform: translate(0, 0)	
+		visibility: visible	
+	
+	#delivery 
+		min-height: 730px
+		background-position-x: 15%
+		.delivery-title
+			margin: 20px 0 30px 0
+		.delivery-item
+			margin-bottom: 50px
+			.icon-wrap
+				margin-bottom: 5px
+
+	// style store page
+	#product-baner .baner-list
+		margin: 0
+	// style about page
+	.achievement-item
+		min-height: 335px
+		margin-bottom: 15px		
+
+	// style team page	
+	.header-team
+		background: url('../img/bg-header-team-sm.png') no-repeat
+	.header	
+		.header-baner-wrap
+			margin-top: 90px
+			height: 270px
+
+	// style career page	
+	.header-career
+		background: url('../img/bg-header-career-sm.png') no-repeat
+	.career-contact .contact-list 
+		.contact-list-item
+			margin-right: 15px
+	.career-contact .contact-list .contact-list-item .career-contact-text
+		font-size: 13px	
+	.career-contact .contact-list .contact-list-item .apply-sv
+		padding: 0 30px
+
+		// style charity page
+	.post-item .post-img-wrap
+		margin: 20px 0 
+	.post-content
+		text-align: center
+	.post-content .post-title:after
+		margin: 0 auto
+		margin-top: 20px	
+
+	// style news page
+	.header-news
+		margin-bottom: 60px
+		background: url('../img/bg-header-news-sm.png') no-repeat
+
+
+	// style cooperation page
+	.cooperation-baner 
+		height: 650px
+		.cooperation-item
+			padding : 50px 0 20px
+			min-height: 295px
+			.cooperation-title
+				margin: 15px 0
+	// style cart page
+	#payment-details .payment-details-right .btn-send
+		width: 60%
+
+
+
+@media (max-width: 768px) 
+	// .header .container 
+	// 	padding-left: 5px
+	// 	padding-right: 5px
+	.menu-wrap 
+		.col-sm-2
+			// padding: 0	
+			position: absolute
+			z-index: 999
+		.col-sm-10
+			width: 100%
+			z-index: 998
+	.header .logo
+		height: 68px		
+	.header	#nav #nav-toggle
+		display: inline-block
+		position: relative
+		height: 31px
+		cursor: pointer
+		vertical-align: middle
+		&.active .nav-arrow
+			background-color: transparent
+			&:before, &:after
+				top: 0
+			&:before
+				transform: rotate(45deg)
+				-webkit-transform: rotate(45deg)
+				-ms-transform: rotate(45deg)
+			&:after
+				transform: translateY(-10px) rotate(-45deg)
+				-webkit-transform: translateY(-10px) rotate(-45deg)
+				-ms-transform: translateY(-10px) rotate(-45deg)
+				top: 10px
+		.nav-arrow
+			position: relative
+			top: 12px
+			height: 4px
+			width: 30px
+			background: #cb2929
+			cursor: pointer
+			display: inline-block
+			content: ''
+			transition: all 500ms ease-in-out
+			-webkit-transition: all 500ms ease-in-out
+			-moz-transition: all 500ms ease-in-out
+			-o-transition: all 500ms ease-in-out
+			&:before, &:after
+				cursor: pointer
+				height: 4px
+				width: 30px
+				background: #cb2929
+				position: absolute
+				display: block
+				content: ''
+			&:before
+				top: -8px
+			&:after
+				bottom: -8px
+				transition: all 500ms ease-in-out
+				-webkit-transition: all 500ms ease-in-out
+				-moz-transition: all 500ms ease-in-out
+				-o-transition: all 500ms ease-in-out
+			&:before, &:after
+				transition: all 500ms ease-in-out
+				-webkit-transition: all 500ms ease-in-out
+				-moz-transition: all 500ms ease-in-out
+				-o-transition: all 500ms ease-in-out
+	.header #nav .nav-list
+		display: none
+		position: absolute
+		top: 65px
+		left: 0
+		z-index: 99
+		width: 100%
+		height: 260px
+		background: #fff
+		border:  solid #cb2929
+		border-width: 2px 0 
+		&:before
+			display: none
+		.nav-item
+			display: block
+			margin: 0 30px
+	.small-menu
+		display: inline-block
+		float: right	
+		margin-top: 12px	
+	.header #nav .nav-list .nav-item a.nav-cart
+		font-size: 0
+
+	.header #nav .nav-list .order-num
+		margin-left: 0	
+
+	.header #nav .nav-cart
+		margin: 15px 25px 0
+
+	.slick-dots	
+		display: block
+		text-align: center
+		li
+			display: inline-block
+			margin: 0 5px
+			button
+				font-size: 0
+				border: 1px solid #cb2929
+				background: transparent
+				background: #fff
+				border-radius: 50%
+				height: 14px
+				width: 10px
+		.slick-active
+			button
+				background: #cb2929
+
+	.slider-main-page .slide-item .slider-content .slider-title
+		font-size: 38px
+	#about-company .chief-img 
+		margin-top: 25px
+		img
+			width: 70%	
+	#about-company .company-description .about-title
+		font-size: 35px
+		line-height: 35px
+		text-align: center
+	#about-company .company-description .about-text
+		font-size: 13px
+		line-height: 18px
+	.owner 
+		display: block
+		float: none
+		text-align: center
+		.owner-wrap .owner-detail
+			font-size: 22px		
+	#product-baner
+		height: 400px
+		text-align: center
+		.about-background
+			height: 100%
+			background-position-x: 20%
+		.baner-list 
+			margin-top: 40px
+			text-align: center
+			.baner-product-item		
+				width: 26%	
+
+	#product 
+		.product-item,
+		.all-product .img-wrap img
+			min-height: 445px			
+		.category-title	
+			font-size: 45px
+			line-height: 45px
+		.product-title
+			max-width: 95%
+			min-height: 85px		
+
+	// style about page
+
+	.header-about 
+		min-height: 450px
+		background: url('../img/bg-about-header-small.png') no-repeat
+	.header-white	
+		#nav .nav-list
+			background: #25201e
+		.header-about-content
+			// margin-top: 10px
+			padding: 0 10px 
+			.header-about-title
+				margin-bottom: 15px
+				font-size: 35px
+				line-height: 35px
+			.icon-www
+				margin-bottom: 10px	
+			.header-about-text
+				max-width: 85%	
+				font-size: 14px
+	.main-page-title
+		font-size: 50px		
+		margin: 25px	0
+	#history .history-text
+		line-height: 20px
+	.title-page
+		font-size: 45px
+		line-height: 50px
+	// style team page
+	.employees-wrap .employees-title
+		font-size: 50px
+	.employees-wrap .employees-month
+		width: 85px
+	.header-team .header-baner-wrap .header-baner .header-baner-title
+		font-size: 45px	
+	.team .team-item .team-img-wrap
+		min-height: 250px
+
+	// style cooperation page
+	.cooperation-baner 
+		height: 700px
+
+
+	// style cart page
+	.hidden-xs
+		display: none 
+	.product-item .title-wrap
+		display: none
+	.total-order .product-item .content-wrap .icon-cart-cancel
+		display: inline-block
+
+	.total-order .product-item .content-wrap .cart-product-title
+		font-size: 16px
+	.total-order .product-item .content-wrap .product-quantity
+		width: 30px
+		height: 30px
+		font-size: 15px
+	.total-order .product-item .content-wrap .cart-price
+		font-size: 16px	
+
+
+
+@media (max-width: 640px) 
+	#product-baner .baner-list .baner-product-item
+		width: 49%
+	#product-baner 
+		height: 500px	
+		.about-background
+			height: 525px	
+	#delivery .delivery-title
+		font-size: 53px
+	#delivery .delivery-item 
+		margin-bottom: 15px
+		.item-title
+		font-size: 20px
+		line-height: 22px
+	.baner-list .baner-product-item:last-child
+		margin-top: 20px
+
+	.header-about .header-about-content .header-about-text
+		max-width: 100%
+		line-height: 21px
+	.achievement-item
+		min-height: 375px		
+
+
+	// style team page
+	.employees-wrap 
+		text-align: center
+		.employees-title
+			display: block
+
+
+		// style career page	
+	.career-contact .contact-list
+		text-align: center
+	.jobs-item-text
+		font-size: 14px
+		line-height: 25px
+	.career-contact
+		margin-top: 30px		
+		.contact-list .contact-list-item
+			margin-bottom: 20px
+	.jobs-contact-popap
+		border-radius: 0px
+		.icon-close
+			top: 15px
+			right: 10px
+			background-position: 0 -591px
+		// style cooperation page
+	.cooperation-baner 
+		height: 1250px	
+
+	// style cart page
+	#payment-details .payment-details-left, #payment-details .payment-details-right
+		width: 100%	
+
+	#payment-details .payment-details-left input
+		max-width: 275px
+	#payment-details .payment-details-right textarea
+		width: 100%
+		margin: 40px 0
+	#payment-details .payment-details-right .btn-send
+		width: 75%
+		float: none
+		display: block
+		margin: 0 auto
+		margin-top: 30px
+	.cart-modal .icon-close	
+		right: 10px
+		top: 10px
+		background-position: 0 -591px
+
+	
+@media (max-width: 480px) 
+
+	.container
+		.row	
+			.col-xs-6
+				width: 100%		
+	.header 
+		// height: 60px
+		.logo
+			width: 49%
+			height: 67px
+		.menu-wrap
+			position: fixed
+			width: 100%
+			height: 60px
+			background: #fff
+			border-bottom: 1px solid #cb2929
+			z-index: 999
+		#nav .nav-list	
+			top: 58px	
+	.header-white,
+	.header-cart
+		.menu-wrap
+			position: relative	
+			background-color: transparent	
+	.small-menu
+		margin-top: 0	
+	#product-baner
+		margin-top: 60px 	
+	#product 
+		.category-wrap
+			margin-top: 0
+		.product-item
+			min-height: 430px
+		.category-title
+			font-size: 35px	
+			line-height: 40px
+		.btn-cart
+			width: 60%			
+	#delivery 
+		min-height: 830px
+		.work-time-title
+			margin-top: 35px
+		.work-time
+			height: 105px
+			.work-schedule
+				font-size: 18px
+				span
+					font-size: 19px		
+	#footer
+		padding: 50px 0 20px 0
+		text-align: center
+		.footer-text
+			margin-bottom: 15px
+
+	// style about page
+	.header-about .header-about-content 
+		margin-top: 20px
+		.header-about-title
+			font-size: 28px
+		.header-about-text	
+			font-size: 12px	
+			line-height: 19px
+	.main-page-title
+		margin: 10px 0
+		font-size: 40px		
+	.achievement-item .achievement-title		
+		margin-bottom: 10px	
+	.achievement-item
+		min-height: 310px	
+	#history 
+		min-height: 650px
+		padding-top: 30px
+		.main-page-title
+			margin: 10px 0
+		.history-text
+			font-size: 14px
+		// line-height: 20px
+	.title-page
+		font-size: 33px
+		line-height: 35px
+		margin: 10px 0
+
+
+		// style team page	
+	.header-team
+		background: url('../img/bg-header-team-xs.png') no-repeat
+	.header	
+		.header-baner-wrap
+			height: 100px
+			margin-top: 10px
+	.header .header-baner-wrap .header-baner .header-baner-title
+		margin-bottom: 10px
+		line-height: 30px
+		font-size: 29px		
+	.employees-wrap .employees-title
+		font-size: 34px
+		margin-bottom: 10px
+	.employees-wrap .employees-month
+		margin-bottom: 15px	
+	.employees-wrap .employees-text
+		font-size: 14px
+		line-height: 20px		
+		// style career page	
+	.header-career
+		background: url('../img/bg-header-career-xs.png') no-repeat
+		.header-baner-wrap 
+			height: 170px
+	#form-jobs-contact
+		text-align: center
+	.jobs-contact-popap .input-item
+		width: 100%
+		max-width: 100%	
+	.jobs-contact-popap .input-item.first
+		margin-right: 0			
+	.jobs-contact-popap textarea
+		margin-bottom: 10px
+	.jobs-contact-popap .input-item
+		margin-bottom: 10px		
+	.jobs-contact-popap .file-upload ,		
+	.jobs-contact-popap .jobs-submit
+		display: block
+		float: none
+		text-align: center
+		margin: 0 auto
+	.jobs-contact-popap .jobs-submit
+		margin: 25px 0 	
+
+	// style news page
+	.header-news
+		margin-bottom: 0px
+		background: url('../img/bg-header-news-xs.png') no-repeat 
+	// style contact page
+	#form-contact .input-item
+		width: 100%
+		max-width: 100%
+	// style cart page
+	.total-order
+		padding-bottom: 0 
+		.product-item .content-wrap
+			padding: 0	
+		.product-item .content-wrap .product-quantity
+			margin: 0 2px	
+	#payment-details .payment-details-left input,
+	#payment-details .payment-details-right input	
+		max-width: 99%
+		width: 100%
+		&:focus
+			border: 2px solid red
+	#payment-details .payment-details-left .small-input
+		width: 25%	
+	#payment-details .payment-details-left #street
+		max-width: 49%	
+	#payment-details .payment-details-left #apartment
+		margin-right: 0
+	#payment-details .payment-details-left #email
+		margin: 20px 0		
